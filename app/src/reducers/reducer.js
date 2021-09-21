@@ -1,3 +1,5 @@
+
+
 const initialState = {
     person: {
         name: {
@@ -6,11 +8,11 @@ const initialState = {
         },
         shows: {
             disney: "Bluey",
-            looneytoons: "Big Bunny"
+            looneytoons: "Bugs Bunny"
         }
     },        
     isFetching: false,
-    error: 'This is an error is reducer...'
+    error: 'This is an error in reducer...'
 }
 
 export const reducer = (state = initialState, action) => {
@@ -19,3 +21,9 @@ export const reducer = (state = initialState, action) => {
             return state;
     }
 };
+
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+

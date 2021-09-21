@@ -5,18 +5,28 @@ import App from './App';
 
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-
 import { reducer } from './reducers/reducer';
-import Person from './components/Person';
+
+
+
+// import { applyMiddleware, createStore } from 'redux';
+// import logger from 'redux-logger';
+
+
+// const store = createStore(
+//   reducer,
+//   applyMiddleware(logger)
+// );
+
 
 
 const store = createStore(reducer);
 
 
 ReactDOM.render(
-  <Povider store={store} >
+  <Provider store={store} >
     <App />
-  </Povider>,
+  </Provider>,
   document.getElementById('root')
 );
 
