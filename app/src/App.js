@@ -1,7 +1,4 @@
-import './App.css';
-import React from 'react';
 import Cosmos from './components/Cosmos';
-// import Person from './components/Person';
 
 
 

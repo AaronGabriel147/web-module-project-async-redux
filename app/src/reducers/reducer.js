@@ -1,5 +1,5 @@
 
-
+// reducer must exist if it is in index.js and all that.
 const initialState = {
     person: {
         name: {
@@ -22,8 +22,4 @@ export const reducer = (state = initialState, action) => {
     }
 };
 
-
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
