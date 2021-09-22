@@ -1,18 +1,50 @@
-import Cosmos from './components/Cosmos';
+import React from 'react';
+import { connect } from 'react-redux';
+// import React, { useEffect, useState } from "react";
+// import axios from 'axios';
+import { fetchNasaAction } from './actions.js/index'
+// import reducer from './reducers/reducer'
 
 
 
+ 
 
-function App() {
+function App(props) {
+
+  const data = props.state.nasa;  
+
+console.log(props)
+  const handleFetchNasa = (e) => {
+    e.preventDefault();
+    props.fetchNasaAction();
+  }
 
   return (
     <div className="App">
-      <header>
-        <h1>NASA Picture of the Day</h1>
-        <Cosmos />
-      </header>
+
+      <button onClick={handleFetchNasa}>FETCH NASA API!</button>
+
+      <h1>NASA Picture of the Day</h1>
+
+      <img src={data.url} alt={data.title} />
+      <h1>{data.title}</h1>
+      <div className="cosmos-cta">
+        <p className="apod-text">{data.explanation}</p>
+      </div>
+      <a className="hd-url" href={data.hdurl}>Full size image.</a>
+
     </div>
   );
 }
 
-export default App;
+
+const mapStateToProps = state => {
+  return {
+    state: state
+  } 
+};
+
+
+export default connect(mapStateToProps, { fetchNasaAction })(App);
+
+// export default App;
